@@ -16,10 +16,10 @@ const HeaderPerfil = () => {
   return (
     <HeaderContainer>
       <div className="container">
-        <a href="#">Restaurantes</a>
         <Link to="/">
-          <img src={Logo} alt="logo" style={{ cursor: 'pointer' }} />
+          <a href="#">Restaurantes</a>
         </Link>
+        <img src={Logo} />
         <span onClick={openCart} style={{ cursor: 'pointer' }}>
           {items.length} produto(s) no carrinho
         </span>

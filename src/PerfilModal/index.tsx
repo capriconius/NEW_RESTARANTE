@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 import close from '../assets/images/close.png'
 import { Prato } from '../components/PerfilList'
 import { formataPreco } from '../utils/formatters'
-import { ModalContainer, Modal, BotaoModal, ModalContent } from './styles'
+import * as S from './styles'
 import { add, open } from '../store/reducers/cart'
 
 type Props = {
@@ -21,7 +21,7 @@ const PerfiltModal = ({ product, isVisible, onClose }: Props) => {
       dispatch(add(product))
       onClose()
 
-      toast.success('Item adicionao! Ver carrinho', {
+      toast.success('Item adicionado! Ver carrinho', {
         onClick: () => dispatch(open()),
         icon: <span>🛒</span>,
         position: 'bottom-right',
@@ -35,11 +35,11 @@ const PerfiltModal = ({ product, isVisible, onClose }: Props) => {
   if (!isVisible || !product) return null
 
   return (
-    <Modal className="visivel">
+    <S.Modal className="visivel">
       <div className="overlay" onClick={onClose}></div>
-      <ModalContainer>
+      <S.ModalContainer>
         <img onClick={onClose} src={close} alt="ícone de fechar" />
-        <ModalContent>
+        <S.ModalContent>
           <img src={product.foto} alt={product.nome} />
           <div>
             <h4>{product.nome}</h4>
@@ -47,13 +47,16 @@ const PerfiltModal = ({ product, isVisible, onClose }: Props) => {
             <p>
               Serve de <span>{product.porcao}</span>
             </p>
-            <BotaoModal onClick={addItem}>
-              Adicionar ao carrinho - {formataPreco(product.preco)}
-            </BotaoModal>
+
+            <S.ModalFooter>
+              <S.BotaoModal onClick={addItem}>
+                Adicionar ao carrinho - {formataPreco(product.preco)}
+              </S.BotaoModal>
+            </S.ModalFooter>
           </div>
-        </ModalContent>
-      </ModalContainer>
-    </Modal>
+        </S.ModalContent>
+      </S.ModalContainer>
+    </S.Modal>
   )
 }
 

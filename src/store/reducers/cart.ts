@@ -20,7 +20,7 @@ const cartSlice = createSlice({
       if (!prato) {
         state.items.push(action.payload)
       } else {
-        alert('Este prato ja foi adicionado ao carrinho')
+        alert('Este prato já foi adicionado ao carrinho')
       }
     },
     remove: (state, action: PayloadAction<number>) => {
@@ -31,9 +31,13 @@ const cartSlice = createSlice({
     },
     close: (state) => {
       state.isOpen = false
+    },
+
+    clear: (state) => {
+      state.items = []
     }
   }
 })
 
-export const { add, remove, open, close } = cartSlice.actions
+export const { add, remove, open, close, clear } = cartSlice.actions
 export default cartSlice.reducer

@@ -1,12 +1,5 @@
 import Estrela from '../../assets/images/estrela.png'
-import {
-  CardContainer,
-  CardContent,
-  CardImage,
-  Descricao,
-  TagsContainer,
-  TituloContainer
-} from './styles'
+import * as S from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
 
@@ -28,27 +21,32 @@ const RestaurantCard = ({
   description,
   infos
 }: Props) => (
-  <CardContainer>
-    <CardImage src={image} alt={title} />
-    <TagsContainer>
+  <S.CardContainer>
+    <S.CardImage src={image} alt={title} />
+    <S.TagsContainer>
       {infos.map((info) => (
         <Tag key={info}>{info}</Tag>
       ))}
-    </TagsContainer>
-    <CardContent>
-      <TituloContainer>
+    </S.TagsContainer>
+    <S.CardContent>
+      <S.TituloContainer>
         <h3>{title}</h3>
         <div>
           <span>{rating}</span>
           <img src={Estrela} alt="estrela" />
         </div>
-      </TituloContainer>
-      <Descricao>{description}</Descricao>
-      <Button type="link" to={`/perfil/${id}`} title="Saiba mais">
+      </S.TituloContainer>
+      <S.Descricao>{description}</S.Descricao>
+      <Button
+        asLink
+        to={`/perfil/${id}`}
+        title="Saiba mais"
+        variant="secondary"
+      >
         Saiba Mais
       </Button>
-    </CardContent>
-  </CardContainer>
+    </S.CardContent>
+  </S.CardContainer>
 )
 
 export default RestaurantCard

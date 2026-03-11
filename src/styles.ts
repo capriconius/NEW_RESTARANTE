@@ -4,7 +4,10 @@ export const cores = {
   branca: '#fff',
   salmao: '#E66767',
   salmaoClaro: '#FFEBD9',
-  corDeFundo: '#FFF8F2'
+  corDeFundo: '#FFF8F2',
+  cinza: '#4B4B4B',
+  vermelho: '#E66767',
+  azul: '#04ffff'
 }
 
 export const breackpoints = {

@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import Home from './components/Pages/Home'
 import Perfil from './components/Pages/Perfil'
-import Footer from './components/Footer'
 import { store } from './store'
 import { Provider } from 'react-redux'
 import Cart from './components/Cart'
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/perfil/:id" element={<Perfil />} />
         </Routes>
-        <Footer />
         <Cart />
         <ToastContainer position="bottom-right" autoClose={3000} />
       </BrowserRouter>

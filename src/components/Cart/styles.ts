@@ -10,7 +10,6 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
 `
 
 export const CartContainer = styled.div`
@@ -101,4 +100,13 @@ export const Price = styled.div`
   font-weight: bold;
   font-size: 16px;
   margin-top: 40px;
+`
+
+export const EmptyMessage = styled.span`
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: ${cores.azul};
+  font-weight: bold;
 `

@@ -48,14 +48,20 @@ export const ModalContent = styled.div`
   padding: 32px;
   color: ${cores.corDeFundo};
   display: flex;
-  width: 1024px;
+  flex: 1;
+  width: 100%;
+  max-width: 1024px;
 
   @media (max-width: ${breackpoints.tablet}) {
-    flex-direction: column; // Empilha imagem e texto no mobile
+    flex-direction: column;
     padding: 16px;
-    max-height: 80vh; // Evita que o modal seja maior que a tela
+    max-height: 80vh;
     overflow-y: auto;
-    width: 90%;
+    width: 100%;
+  }
+
+  @media (max-width: ${breackpoints.mobile}) {
+    padding: 12px;
   }
 
   img {
@@ -65,10 +71,14 @@ export const ModalContent = styled.div`
     margin-right: 24px;
 
     @media (max-width: ${breackpoints.tablet}) {
-      width: 100%; // Imagem ocupa toda a largura no mobile
+      width: 100%;
       height: 200px;
       margin-right: 0;
       margin-bottom: 16px;
+    }
+
+    @media (max-width: ${breackpoints.mobile}) {
+      height: 150px;
     }
   }
 
@@ -76,17 +86,26 @@ export const ModalContent = styled.div`
     font-size: 18px;
     font-weight: 900;
     margin-bottom: 16px;
+
+    @media (max-width: ${breackpoints.mobile}) {
+      font-size: 16px;
+    }
   }
 
   p {
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 16px;
+
+    @media (max-width: ${breackpoints.mobile}) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 `
 
 export const BotaoModal = styled.button`
-  background-color: ${cores.corDeFundo}; // Cor clara do botão
+  background-color: ${cores.corDeFundo};
   color: ${cores.salmao};
   border: none;
   padding: 4px 8px;
@@ -98,5 +117,20 @@ export const BotaoModal = styled.button`
   @media (max-width: ${breackpoints.tablet}) {
     width: 100%;
     padding: 12px;
+  }
+
+  @media (max-width: ${breackpoints.mobile}) {
+    font-size: 12px;
+    padding: 10px;
+  }
+`
+
+export const ModalFooter = styled.div`
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: ${breackpoints.tablet}) {
+    width: 100%;
   }
 `

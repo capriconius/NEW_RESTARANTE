@@ -1,4 +1,4 @@
-import { BotaoAdicionar, Card, Descricao, Foto, Titulo } from './styles'
+import * as S from './styles'
 
 type Props = {
   nome: string
@@ -8,12 +8,12 @@ type Props = {
 }
 
 const PerfilCard = ({ nome, foto, descricao, onOpen }: Props) => (
-  <Card>
-    <Foto src={foto} alt={nome} />
-    <Titulo>{nome}</Titulo>
-    <Descricao>{descricao}</Descricao>
-    <BotaoAdicionar onClick={onOpen}>Saiba mais</BotaoAdicionar>
-  </Card>
+  <S.Card>
+    <S.Foto src={foto} alt={nome} />
+    <S.Titulo>{nome}</S.Titulo>
+    <S.Descricao>{descricao}</S.Descricao>
+    <S.BotaoAdicionar onClick={onOpen}>Saiba mais</S.BotaoAdicionar>
+  </S.Card>
 )
 
 export default PerfilCard
