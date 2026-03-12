@@ -29,6 +29,12 @@ type PurchasePayload = {
   }
 }
 
+// Tipo de resposta da API de checkout
+type PurchaseResponse = {
+  success: boolean
+  orderId: string
+}
+
 const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api-ebac.vercel.app/api/efood'
@@ -40,7 +46,7 @@ const api = createApi({
     getPratos: builder.query<Restaurante, string>({
       query: (id) => `restaurantes/${id}`
     }),
-    purchase: builder.mutation<any, PurchasePayload>({
+    purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
         url: 'checkout',
         method: 'POST',
