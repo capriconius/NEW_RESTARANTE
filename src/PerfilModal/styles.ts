@@ -115,8 +115,9 @@ export const BotaoModal = styled.button`
   max-width: 218px; /* limita a largura máxima */
 
   @media (max-width: ${breackpoints.tablet}) {
-    width: 100%;
-    padding: 12px;
+    width: 100vw; /* ocupa toda a largura da viewport */
+    max-width: 100vw; /* garante que não ultrapasse a tela */
+    padding: 6px;
   }
 
   @media (max-width: ${breackpoints.mobile}) {
@@ -131,6 +132,8 @@ export const ModalFooter = styled.div`
   width: 100%;
 
   @media (max-width: ${breackpoints.tablet}) {
-    width: 100%;
+    max-width: 100vw;
+    text-align: center;
+    justify-content: center;
   }
 `

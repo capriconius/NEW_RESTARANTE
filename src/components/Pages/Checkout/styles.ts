@@ -26,7 +26,7 @@ export const InputGroup = styled.div<InputGroupProps>`
     margin-top: 8px;
     margin-bottom: 8px;
     width: 100%;
-    text-align: center;
+    padding-left: 8px;
 
     &.error {
       border: solid 1px ${cores.vermelho};

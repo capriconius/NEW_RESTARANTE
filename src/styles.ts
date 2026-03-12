@@ -28,6 +28,7 @@ export const GlobalCss = createGlobalStyle`
     background-color: ${cores.corDeFundo};
     color: ${cores.salmao};
   }
+    
 
 .container{
   max-width: 1024px;

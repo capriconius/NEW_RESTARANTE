@@ -197,7 +197,7 @@ const Checkout = ({ onBackToCart, total, onFinish }: Props) => {
               <S.InputGroup>
                 <label htmlFor="cep">CEP</label>
                 <InputMask
-                  mask="99999-999"
+                  mask="99999999"
                   id="cep"
                   name="cep"
                   value={form.values.cep}
@@ -210,7 +210,7 @@ const Checkout = ({ onBackToCart, total, onFinish }: Props) => {
               <S.InputGroup>
                 <label htmlFor="number">Número</label>
                 <InputMask
-                  mask="99999"
+                  mask="9999"
                   id="number"
                   name="number"
                   value={form.values.number}
