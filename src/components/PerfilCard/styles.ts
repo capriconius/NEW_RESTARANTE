@@ -32,7 +32,7 @@ export const Descricao = styled.p`
 export const BotaoAdicionar = styled.button`
   background-color: ${cores.salmaoClaro};
   color: ${cores.salmao};
-  padding: 4px 0;
+  padding: 8px;
   border: none;
   font-weight: 700;
   font-size: 14px;

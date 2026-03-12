@@ -37,12 +37,7 @@ const RestaurantCard = ({
         </div>
       </S.TituloContainer>
       <S.Descricao>{description}</S.Descricao>
-      <Button
-        asLink
-        to={`/perfil/${id}`}
-        title="Saiba mais"
-        variant="secondary"
-      >
+      <Button asLink to={`/perfil/${id}`} title="Saiba mais" variant="primary">
         Saiba Mais
       </Button>
     </S.CardContent>

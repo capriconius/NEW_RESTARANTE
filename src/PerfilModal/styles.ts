@@ -103,16 +103,16 @@ export const ModalContent = styled.div`
     }
   }
 `
-
 export const BotaoModal = styled.button`
   background-color: ${cores.corDeFundo};
   color: ${cores.salmao};
   border: none;
-  padding: 4px 8px;
+  padding: 6px 4px;
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
-  width: fit-content;
+  width: 100%; /* ocupa toda a largura */
+  max-width: 218px; /* limita a largura máxima */
 
   @media (max-width: ${breackpoints.tablet}) {
     width: 100%;
@@ -124,11 +124,11 @@ export const BotaoModal = styled.button`
     padding: 10px;
   }
 `
-
 export const ModalFooter = styled.div`
   margin-top: 16px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
 
   @media (max-width: ${breackpoints.tablet}) {
     width: 100%;

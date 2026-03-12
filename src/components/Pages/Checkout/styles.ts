@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 import { cores } from '../../../styles'
 
 type InputGroupProps = {
@@ -48,6 +48,7 @@ export const CheckPrice = styled.div`
 export const Paragraph = styled.p`
   color: ${cores.salmaoClaro};
 `
+
 export const Label = styled.label`
   text-align: left;
   display: block;
