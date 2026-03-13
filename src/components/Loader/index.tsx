@@ -4,7 +4,7 @@ import { Container } from './styles'
 
 const Loader = () => (
   <Container>
-    <PuffLoader color={cores.azul} />
+    <PuffLoader size={400} color={cores.azul} />
   </Container>
 )
 
